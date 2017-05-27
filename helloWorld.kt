@@ -1,5 +1,35 @@
 //Default Main Function to learn Kotlin
 
+/*
+**	Function Overload
+*/
+fun	sum(n1: Double, n2: Double):Double
+{
+	return (n1 + n2);
+}
+fun	sum(n1: Int, n2: Int):Int
+{
+	return (n1 + n2);
+}
+
+/*
+**	Function Polymorph
+*/
+fun	show(number: Int):Unit
+{
+	println(number)
+}
+fun	show(float: Double):Unit
+{
+	println(float)
+}
+fun	show(str: String):Unit
+{
+	println(str)
+}
+
+// ---------------------------------------------------------------------------//
+
 fun main(args: Array<String>)
 {
 	/*
@@ -10,12 +40,12 @@ fun main(args: Array<String>)
 	var		number:Int
 	var		string:String
 	var		stringSecond:String?
+	var		array = ArrayList<String>()
 
 	/*
 	**	!! at the end -> Cannot be null
 	*/
 	Bool = true
-	println("Enter a Number: ")
 	number = 10
 	string = "Helloooo"
 	println("Enter your Name: ")
@@ -39,7 +69,22 @@ fun main(args: Array<String>)
 	}
 
 	for (item in 1..10)
-		println("Item: " + item)
+		println("Item: ${item}")
 	while (number >= 1)
-		println("Number: " + number--)
+		println("Number: ${number--}")
+
+	array.add("Test")
+	array.add("Testeu")
+	array.add("Testa")
+	array.add("Tester")
+	array[2] = "Maison"
+
+	for (elem in array)
+		println("${elem}")
+	if (array.contains("Maison"))
+		println("YEP")
+	else
+		println("NOP")
+
+	println(sum(10.3, 42.0));
 }
