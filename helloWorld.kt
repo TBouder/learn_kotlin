@@ -1,5 +1,7 @@
 //Default Main Function to learn Kotlin
 
+val	globalVar:String = "String"
+
 /*
 **	Function Overload
 */
